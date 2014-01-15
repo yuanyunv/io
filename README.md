@@ -29,20 +29,20 @@ io
 	done
 
 4、具运行方法
+
 	python io -i 1 -g 3001,3002
 
-Read Cgroup Blkio Group as group['ins'] , ins as 3001,3002 on Every process
-
-as
-
-#python io -i 1 -g 3001,3002
-        Program io
-        read Cgroup Blkio Group as group['ins'] , ins as '3001','3002'
-        display every instance read io , write io , r+w iops and all instance iops
-    
-输出效果
-	SHELL Scripts:
+	Read Cgroup Blkio Group as group['ins'] , ins as 3001,3002 on Every process
 	
+	as
+
+输出效果
+	
+	SHELL Scripts:
+	#python io -i 1 -g 3001,3002
+	Program io
+	read Cgroup Blkio Group as group['ins'] , ins as '3001','3002'
+
 	|--Instance----Read------|--Write-----|--rwio------|--Instance--|--Read------|--Write-----|--rwio------|--iops------|--------Time---------|
 	|  3001        22173     |  8745      |  30918     |  3002      |  22770     |  9001      |  31771     |  62689     |  2014-01-15 10:41:08|
 	|  3001        21828     |  9285      |  31113     |  3002      |  22460     |  9097      |  31557     |  62670     |  2014-01-15 10:41:09|
