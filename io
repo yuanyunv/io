@@ -23,7 +23,8 @@ class Now_Time_Stamp:
 def handler(signum, frame):
     global is_exit
     is_exit = True
-    print "receive a signal %d, is_exit = %d"%(signum, is_exit)
+    print 'Program io exit'
+
 class colors :
     BLACK='\033[0;30m'
     DARKRED='\033[0;31m'
@@ -138,7 +139,10 @@ def processer() :
         elif o in ('-h','--help'):
             usage()
             sys.exit(0)
-    group=['3001','3002']
+    if len(groups) == 0 :
+        group=['3001','3002']
+    else :
+        group=groups.split(',')
     #if not opts:
     #    usage()
     #    sys.exit(1)
@@ -177,7 +181,7 @@ def processer() :
         group_value_list=now_group_value_list
         band=band+returnstr( 'iops' ,'center','-') + colors.YELLOW + '-'*8+'Time'+'-'*9+'|' + colors.RESET
         if number == 2 :
-            print ( colors.RED + '-' * 138 + colors.RESET )
+#            print ( colors.RED + '-' * 138 + colors.RESET )
             print band
         if ( (number % 40) == 0 ):
             print band
@@ -207,6 +211,5 @@ if __name__ == '__main__' :
         Program io
         read Cgroup Blkio Group as group['ins'] , ins as '3001','3002'
         display every instance read io , write io , r+w iops and all instance iops
-        Usage : io [OPTIOIN]
     '''
     main()
