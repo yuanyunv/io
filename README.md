@@ -1,8 +1,10 @@
 io
 ==
+从cgroup分组中读取IOPS，并展示给用户。
+
 本工具读取已经挂载好的Cgroup BLKIO模块作为数据读取源。
 
-使用本工具需：
+使用方法:
 
 1、挂载cgroup blkio
 
