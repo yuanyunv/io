@@ -2,9 +2,7 @@
 #****************************************************************#
 # Encoding utf8
 # ScriptName: io.py
-# Author: yuanyun.wk@alibaba-inc.com
 # Create Date: 2014/01/10 13:37
-# Modify Author: $SHTERM_REAL_USER@alibaba-inc.com
 # Modify Date: 2014-01-13 13:37
 # Function: 
 #***************************************************************#
